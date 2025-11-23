@@ -422,6 +422,7 @@ impl crate::context::Context {
                 if let Some(_fg) = self.get_fuel_gauge(DeviceId(battery_id)) {
                     // TODO: Save trip point
                     info!("Battery service: New BTP {}", btp.trip_point);
+                    info!("Test");
                     request.payload = mctp::Odp::BatterySetBtpResponse {};
                     request.status = 0;
                 } else {
